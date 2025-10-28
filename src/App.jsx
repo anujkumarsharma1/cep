@@ -1,4 +1,5 @@
 import React, { useState, useEffect, createContext, useContext, useMemo } from 'react';
+import Chatbot from './components/Chatbot';
 // Make sure src/index.css is imported in main.jsx
 
 // --- (1) MOCK DATA & INITIAL STATE ---
@@ -695,6 +696,7 @@ export default function App() {
                 </footer>
                 <DonateModal isOpen={donateModal.isOpen} onClose={handleCloseDonateModal} ngo={donateModal.ngo} />
                 <RegisterNgoModal isOpen={isRegisterModalOpen} onClose={() => setIsRegisterModalOpen(false)} />
+                <Chatbot />
             </div>
         </AppProvider>
     );
